@@ -13,7 +13,7 @@ router.get('/', candidateController.getCandidates);
 router.get('/:id', candidateController.getCandidateById);
 
 // Update a candidate
-router.put('/:id', candidateController.updateCandidate);
+router.put('/:id',upload('cvs').single('cvFile'), candidateController.updateCandidate);
 
 // Delete a candidate
 router.delete('/:id', candidateController.deleteCandidate);
