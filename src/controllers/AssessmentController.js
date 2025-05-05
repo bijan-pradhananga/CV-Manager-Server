@@ -28,7 +28,8 @@ const uploadAssessment = async (req, res) => {
 
 const getAssessmentByCandidate = async (req, res) => {
   try {
-    const candidateId = req.params.id;
+    const candidateId = req.params.candidateId;
+    
     const assessments = await Assessment.find({ candidate: candidateId });
 
     res.status(200).json(assessments);
