@@ -3,9 +3,10 @@ const mongoose = require('mongoose');
 
 const interviewSchema = new mongoose.Schema({
     candidate: { type: mongoose.Schema.Types.ObjectId, ref: 'Candidate', required: true },
+    interviewer: { type: mongoose.Schema.Types.ObjectId, ref: 'Interviewer', required: true },
+    stage: String,
     interviewDate: Date,
     interviewTime: String,
-    interviewerName: String,
     reminderSent: { type: Boolean, default: false }
 }, { timestamps: true });
 

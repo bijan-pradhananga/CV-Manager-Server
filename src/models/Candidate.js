@@ -6,7 +6,7 @@ const candidateSchema = new mongoose.Schema({
     phone: String,
     email: { type: String, required: true },
     references: String,
-    technology: [String], // Array of techs: ['React', 'Node', 'DevOps']
+    technology: String,
     level: { type: String, enum: ['Junior', 'Mid', 'Senior'] },
     salaryExpectation: Number,
     experience: Number,
